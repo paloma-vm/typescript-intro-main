@@ -5,7 +5,7 @@ function sayHello(): () => string {
     return () => 'Hello!'
 }
 // This variable contains a function that returns a string
-const hello = sayHello()
+const hello: () => string = sayHello()
 // Calling the function returns the string
 console.log( hello() ) // Hello!
 console.log( hello() ) // Hello!
@@ -13,8 +13,8 @@ console.log( hello() ) // Hello!
 console.log( hello() ) // Hello!
 
 function mathematizer(n: number): (x: number) => number {
-    let sum = n
-    return (x) => x * n
+    let sum: number = n
+    return (x: number) => x * n
 }
 
 const m = mathematizer(3)
